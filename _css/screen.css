@@ -1,0 +1,1690 @@
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+a {
+	outline: none;
+}
+a {
+	color: #333333;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.warning {
+	display: block;
+	width: auto;
+	height: auto;
+	background: #fdf7a6 url(../_images/icons/action_alert_16x16.gif) 12px center no-repeat;
+	border: 1px solid #aba000;
+	font-size: 10px;
+	color: #827b00;
+	padding: 3px 3px 3px 44px;
+}
+
+.error {
+	display: block;
+	width: auto;
+	height: auto;
+	background: #f69679 url(../_images/icons/action_error_16x16.gif) 12px center no-repeat;
+	border: 1px solid #9e0b0f;
+	font-size: 10px;
+	color: #790000;
+	padding: 3px 3px 3px 44px;
+}
+
+.login {
+	top: 30px;
+	left: 30px;
+	position:absolute;	
+}
+
+/* inicio de CABECALHO
+_____________________________________________________________________________________________ */
+
+#cabecalho {
+	position: relative;
+	display: block;
+	width: auto;
+	height: 20px;
+	padding: 2px 8px;
+	background: url(../_images/estrutura/fundo1.gif) bottom repeat-x /*#7fc2e7/*#c3c3c3*/;
+}
+
+#cabecalho h1 {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+#cabecalho a {
+	position: absolute;
+	top: 3px;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px;
+	color: #fff;
+	background: url(../_images/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#cabecalho a:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+#cabecalho p {
+	position: absolute;
+	top: 0px;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px;
+	color: #006399;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;	
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#cabecalho a.sistema {
+	background: none;
+	border: 0;
+	top: 4px;
+	left: 6px;
+	padding: 0;
+	font-size: 14px;
+	color: #006399;/*#000*/;
+	font-weight: bold;
+}
+
+#cabecalho a.sistema:hover {
+	background: #adadad;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+#cabecalho h2 {
+	position: absolute;
+	background: none;
+	border: 0;
+	top: -5px;
+	left: 120px;
+	padding: 0;
+	color: #000;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#cabecalho a.configuracoes {
+	right: 50px;
+	
+}
+#cabecalho p.nome_usuario {
+	right: 60px;
+	background: none;
+	border: 0;
+	top: -5px;
+	/*padding: 5;*/
+	font-size: 11px;
+	color: #006399;/*#000*/;
+	font-weight: normal;
+}	
+#cabecalho a.sair {
+	right: 10px;
+}
+
+/* fim de CABECALHO
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+/* inicio de MENU PRINCIPAL
+_____________________________________________________________________________________________ */
+
+#menu-principal {
+	padding: 0;
+	margin: 5px 0 0 0;
+	list-style-type: none;
+}
+
+#menu-principal li {
+	display: inline;
+}
+
+#menu-principal li a {
+	background: url(../_images/icons/menu/menu-default.gif) center 0px no-repeat;
+	float: left;
+	display: block;
+	width: 69px;
+	height: 15px;
+	padding-top: 53px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+}
+
+#menu-principal li a.basicos,
+.basicos #menu-secao li a {
+	background: url(../_images/icons/menu/basicos.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.usuarios,
+.usuarios #menu-secao li a {
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.clientes,
+.clientes #menu-secao li a {
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.fornecedores,
+.fornecedores #menu-secao li a {
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+#menu-principal li a.servicos,
+.servicos #menu-secao li a {
+	background: url(../_images/icons/menu/servicos.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.pauta,
+.pauta #menu-secao li a {
+	background: url(../_images/icons/menu/pauta.jpg) center 0px no-repeat;
+}
+#menu-principal li a.financeiro,
+.financeiro #menu-secao li a {
+	background: url(../_images/icons/menu/financeiro.jpg) center 0px no-repeat;
+}
+#menu-principal li a.produtos,
+.produtos #menu-secao li a {
+	background: url(../_images/icons/menu/produtos.jpg) center 0px no-repeat;
+}
+#menu-principal li a.pedidos,
+.pedidos #menu-secao li a {
+	background: url(../_images/icons/menu/pedidos.jpg) center 0px no-repeat;
+}
+#menu-principal li a.contatos,
+.pedidos #menu-secao li a {
+	background: url(../_images/icons/menu/contatos.jpg) center 0px no-repeat;
+}
+#menu-principal li a.relatorios,
+.relatorios #menu-secao li a {
+	background: url(../_images/icons/menu/relatorios.jpg) center 0px no-repeat;
+}
+/* fim de MENU PRINCIPAL
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de MENU SEÇÃO
+_____________________________________________________________________________________________ */
+
+#menu-secao {
+	padding: 0;
+	margin: 5px 0 40px 0;
+	list-style-type: none;
+}
+
+#menu-secao li {
+	display: inline;
+	font-size: 22px;
+	color: #006399;
+}
+
+#menu-secao li a {
+	background: url(../_images/icons/menu-default.gif) center 0px no-repeat;
+	float: left;
+	display: block;
+	width: 69px;
+	height: 15px;
+	padding-top: 53px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+	margin-bottom: 15px;
+}
+
+#menu-secao li a.basicos
+{
+	background: url(../_images/icons/menu/basicos.jpg) center 0px no-repeat;
+}
+
+#menu-secao li a.usuarios
+{
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+#menu-secao li a.pedidos
+{
+	background: url(../_images/icons/menu/pedidos.jpg) center 0px no-repeat;
+}
+#menu-secao li a.servicos
+{
+	background: url(../_images/icons/menu/servicos.jpg) center 0px no-repeat;
+}
+#menu-secao li a.clientes
+{
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+#menu-secao li a.fornecedores
+{
+	background: url(../_images/icons/menu/pessoas.jpg) center 0px no-repeat;
+}
+#menu-secao li a.pauta
+{
+	background: url(../_images/icons/menu/pauta.jpg) center 0px no-repeat;
+}
+#menu-secao li a.produtos
+{
+	background: url(../_images/icons/menu/produtos.jpg) center 0px no-repeat;
+}
+#menu-secao li a.financeiro
+{
+	background: url(../_images/icons/menu/financeiro.jpg) center 0px no-repeat;
+}
+#menu-secao li a.contatos
+{
+	background: url(../_images/icons/menu/contatos.jpg) center 0px no-repeat;
+}
+#menu-secao li a.relatorios
+{
+	background: url(../_images/icons/menu/relatorios.jpg) center 0px no-repeat;
+}
+/* fim de MENU SEÇÃO
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de SUB MENU
+_____________________________________________________________________________________________ */
+
+#sub-menu {
+	position: absolute;
+	left: 80px;
+	top: 68px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#sub-menu li {
+	display: inline;
+}
+
+#sub-menu li a {
+	float: left;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 1px 8px;
+	background: #fff url(../_images/estrutura/fundo1.gif) center repeat-x !important /*#d4d4d4*/;
+	border-left: 1px solid #d2d2d2;
+	border-top: 1px solid #d2d2d2;
+	border-right: 1px solid #979797/*#bababa*/;
+	border-bottom: 1px solid #979797/*#bababa*/;
+	color: #000;
+	font-size: 11px;
+	text-decoration: none;
+	margin-right: 4px;
+}
+
+#sub-menu li a:hover {
+	background: #d3d3d3/*#939393*/;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+/* fim de SUB PRINCIPAL
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de EXPANDIR
+_____________________________________________________________________________________________ */
+
+#expandir {
+	position: absolute;
+	right: 26px;
+	top: 20px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#expandir li {
+	display: inline;
+}
+
+#expandir li a {
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px 0 26px;
+	background: url(../_images/icons/flecha-down.gif) no-repeat 6px 5px /*#e6e6e6*/;
+	/*border-right: 1px solid #7a7a7a;
+	border-bottom: 1px solid #7a7a7a;
+	border-left: 1px solid #bbb;*/
+	color: #000;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#expandir li a:hover {
+	/*background: #c3c3c3;
+	border-right: 1px solid #bebdbd;
+	border-bottom: 1px solid #bebdbd;
+	border-left: 1px solid #aeaeae;*/
+}
+
+
+/* fim de EXPANDIR
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de FORM
+_____________________________________________________________________________________________ */
+
+form {
+	clear: both;
+	margin: 0 10px;
+}
+
+form h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 3px;
+}
+
+form .abas {
+	position: absolute;
+	list-style-type: none;
+	font-size: 11px;
+	margin-bottom: -2px;
+	z-index: 10;
+	height: 20px;
+}
+
+form .abas li {
+	display: inline;
+}
+
+form .abas li a {
+	float: left;
+	display: block;
+	/*border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	padding: 2px 18px;*/
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-top: 3px solid #fff;
+	padding: 1px 18px 0;
+	background: #e6e6e6;
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+form .abas li a:hover {
+	border-left: 1px solid #dcd680;
+	border-right: 1px solid #dcd680;
+	border-top: 1px solid #dcd680;
+	background: #c7c7c7;
+	padding: 2px 18px;
+}
+
+form .abas li a.selecionada {
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	background: #fff;
+	padding: 2px 18px;
+}
+
+form fieldset {
+	padding: 0 0 0 4px;
+	margin: 0 0 12px 0;
+	border: 0;
+	clear: both;
+	width: 970px;
+}
+
+form fieldset legend {
+	font-size: 11px;
+}
+
+form fieldset fieldset {
+	padding: 0;
+	margin: 4px 0 0 0;
+	clear: none;
+}
+
+form fieldset fieldset fieldset {
+	float: left;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+form fieldset fieldset label {
+	display: block;
+	font-size: 11px;
+}
+
+form input,
+form select,
+form textarea {
+	border: 1px solid #a7a7a7/*#737373*/;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 2px;
+	background: #fff;
+	color: #000;
+}
+
+form input {
+	width: 226px;
+}
+
+form select {
+	width: 232px;
+}
+
+form textarea {
+	width: 952px;
+}
+
+form .radio {
+	border: 0;
+}
+
+form .radio,
+form .checkbox {
+	width: auto;
+	border: 0;
+	background: none;
+}
+
+form fieldset.checkbox {
+	padding-top: 11px;
+}
+
+form fieldset.checkbox .checkbox {
+	float: left;
+}
+
+form fieldset.checkbox label {
+	float: left;
+	padding-top: 4px;
+}
+
+form fieldset.buttons {
+	margin: 15px 0;
+}
+
+fieldset.buttons input,
+form fieldset.buttons input,
+form .bt,
+.bt {
+	width: auto;
+	height: auto;
+	padding: 0 8px;
+	background: url(../_images/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #000/*#fff*/;
+	font-size: 11px;
+	text-decoration: none;
+	cursor: pointer;
+}
+fieldset.buttons input,
+form fieldset.buttons input,
+form .rs,
+.rs {
+	width: auto;
+	height: auto;
+	padding: 0 8px;
+	background: url(../_images/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #000/*#fff*/;
+	font-size: 11px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*fieldset.buttons .reset,
+form fieldset.buttons .reset,
+form .reset,
+.reset {
+	background: url(../img/estrutura/fundo5.gif) repeat-x /*#e0cac8*/
+ 
+
+.bt {
+	margin-left: 15px;
+}
+
+form fieldset.buttons input,
+form .bt {
+	margin-left: 0;
+}
+
+fieldset.buttons input:hover,
+form fieldset.buttons input:hover,
+form .bt:hover, form .rs:hover,
+.bt:hover, .rs:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+
+/* fim de FORM
+_____________________________________________________________________________________________ */
+
+
+/* inicio de form AGENDAR-HORARIO
+_____________________________________________________________________________________________ */
+
+#calendario {
+	position: fixed;
+	right: 10px;
+	
+}
+
+a.adicionar:hover{
+	cursor: pointer;
+}
+
+form #agendar-horario {
+	width: 600px;	
+}
+
+#agendar-horario fieldset {
+	padding: 0 0 0 4px;
+	margin: 0 0 12px 0;
+	border: 0;
+	clear: both;
+	width: 570px;
+}
+
+
+#agendar-horario fieldset fieldset {
+	padding: 0;
+	margin: 4px 0 0 0;
+	clear: none;
+}
+
+#agendar-horario fieldset fieldset fieldset {
+	float: left;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+#agendar-horario input[type=text]{
+	width: 260px;	
+}
+#agendar-horario select{
+	width: 265px;
+}
+#agendar-horario textarea {
+	height: 200px;
+	width: 550px;
+}
+/* inicio de LISTAGEM
+_____________________________________________________________________________________________ */
+
+/* inicio de FILTRO
+_________________________________________________________ */
+
+div .filtro {
+	position: relative;
+	width: 911px;
+	height: 16px;
+	background: url(../_images/estrutura/fundo4.gif) top repeat-x /*#e6e6e6*/;
+	padding: 2px 1px 2px 56px;
+	margin-bottom: 0px;
+}
+
+div .filtro h3 {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+}
+
+div .filtro fieldset {
+	display: inline;
+}
+
+div .filtro fieldset fieldset {
+	position: absolute;
+	left: 50px;
+	top: -2px;
+}
+
+div .filtro fieldset fieldset {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+div .filtro fieldset fieldset label {
+	display: inline;
+}
+
+div .filtro fieldset fieldset input,
+div .filtro fieldset fieldset select {
+	padding: 0 4px;
+	height: 14px;
+	font-size: 10px;
+}
+
+div .filtro fieldset fieldset select {
+	padding: 0;
+	width: auto;
+}
+
+div .filtro fieldset fieldset .radio {
+	margin-top: 1px;
+	height: 12px;
+}
+
+div .filtro .buttons {
+	width: auto;
+}
+
+div .filtro .buttons input {
+	position: absolute;
+	right: 4px;
+	top: 3px;
+	display: block;
+	width: auto;
+	height: auto;
+	padding: 0 8px;
+	/*background: #d4d4d4;
+	border-left: 1px solid #d2d2d2;
+	border-top: 1px solid #d2d2d2;
+	border-right: 1px solid #bababa;
+	border-bottom: 1px solid #bababa;*/
+	background: url(../_images/estrutura/fundo2.gif) repeat-x;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #000;
+	font-size: 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div .filtro .buttons input:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+
+/* fim de FILTRO
+_________________________________________________________ */
+
+/* inicio de PAGINAÇÃO
+_________________________________________________________ */
+
+#form-paginacao {
+	position: relative;
+	width: 893px;
+	height: 16px;
+	background: url(../_images/estrutura/fundo6.gif) top repeat-x /*#e6e6e6*/;
+	padding: 2px 1px 2px 74px;
+	top: -40px;
+}
+
+#form-paginacao h3 {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#form-paginacao fieldset {
+	display: inline;
+}
+
+#form-paginacao fieldset fieldset {
+	position: absolute;
+	left: 50px;
+	top: -2px;
+}
+
+#form-paginacao fieldset fieldset {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+#form-paginacao fieldset fieldset label {
+	display: inline;
+}
+
+#form-paginacao fieldset fieldset input,
+#form-paginacao fieldset fieldset select {
+	padding: 0 4px;
+	height: 14px;
+	font-size: 10px;
+}
+
+#form-paginacao fieldset fieldset select {
+	padding: 0;
+	width: auto;
+}
+
+/* fim de PAGINAÇÃO
+_________________________________________________________ */
+
+/* inicio de GRID
+_________________________________________________________ */
+
+.grid {
+	width: 970px;
+	display: block;
+	margin: 50px;
+	margin-left: 9px;
+	margin-top: 0px;
+	font-size: 11px;
+	
+}
+.grid select{
+	width: auto;
+	height: 16px;
+	padding: 0;
+}
+.grid table {
+	width: 970px;
+	font-size: 11px;	
+}
+.grid table thead tr {
+	background: #c6c6c6;
+}
+
+.grid table tbody tr {
+	background: #f5f5f5;
+}
+
+.grid table tbody tr.par {
+	background: #e6e6e6;
+} 
+.grid table tbody tr:hover {
+	background: #D1D7E7;
+}
+.grid table tbody tr.amarelo {
+	background: #FFFF66;
+} 
+.grid table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+.grid table tbody td.grid-action {
+	padding: 0;
+	width: 50px;
+}
+
+.grid table .col-5 {
+	width: 140px;
+}
+.grid table .col-4 {
+	width: 100px;
+}
+.grid table .col-3 {
+	width: 80px;
+}
+
+.grid table td.grid-action a {
+	display: block;
+	width: auto;
+	min-width: 14px;
+	height: 12px;
+	text-indent: -999999999px;
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 2px 0;
+}
+
+.grid table td.grid-action a.imprimir {
+	background: url(../_images/icons/bt_print_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.visualizar {
+	background: url(../_images/icons/bt_view_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.editar {
+	background: url(../_images/icons/bt_edit_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.excluir {
+	background: url(../_images/icons/bt_delete_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.orcar {
+	background: url(../_images/icons/bt_orcar_12x12.gif) center center no-repeat;
+}
+.grid table td.grid-action a.email {
+	background: url(../_images/icons/bt_email_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.adicionar {
+	background: url(../_images/icons/bt_add_14x14.gif) center center no-repeat;
+}
+.grid table td.grid-action a.atendido {
+	background: url(../_images/icons/bt_concluido_14x14.gif) center center no-repeat;
+}
+/* fim de GRID
+_________________________________________________________ */
+/* inicio de GRID2 - USADO NA LISTAGEM DE PITS AGUARDANDO RESPOSTA
+_________________________________________________________ */
+
+.grid2 {
+	width: 970px;
+	display: block;
+	margin-left: 9px;
+	font-size: 11px;
+	margin-bottom: 40px;
+	margin-top: -50px;
+}
+
+.grid2 table {
+	width: 970px;
+
+}
+.grid2 select{
+	width: auto;
+	height: 16px;
+	padding: 0;
+}
+
+.grid2 table thead tr {
+	background: #c6c6c6;
+}
+
+.grid2 table tbody tr {
+	background: #f5f5f5;
+}
+
+.grid2 table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+.grid2 table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+.grid2 table tbody td.grid-action {
+	padding: 0;
+	width: 50px;
+}
+
+.grid2 table td.grid-action a {
+	display: block;
+	width: auto;
+	min-width: 14px;
+	height: 12px;
+	text-indent: -999999999px;
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 2px 0;
+}
+
+.grid2 table td.grid-action a.imprimir {
+	background: url(../_images/icons/bt_print_12x12.gif) center center no-repeat;
+}
+
+.grid2 table td.grid-action a.visualizar {
+	background: url(../_images/icons/bt_view_12x12.gif) center center no-repeat;
+}
+
+.grid2 table td.grid-action a.editar {
+	background: url(../_images/icons/bt_edit_12x12.gif) center center no-repeat;
+}
+
+.grid2 table td.grid-action a.excluir {
+	background: url(../_images/icons/bt_delete_12x12.gif) center center no-repeat;
+}
+.grid2 table td.grid-action a.orcar {
+	background: url(../_images/icons/bt_orcar_12x12.gif) center center no-repeat;
+}
+.grid table td.grid-action a.email {
+	background: url(../_images/icons/bt_email_12x12.gif) center center no-repeat;
+}
+
+/* fim de GRID
+_________________________________________________________ */
+/* inicio de GRID2 - USADO NA LISTAGEM DE SETORES PARA ORÇAMENTOS
+_________________________________________________________ */
+
+.grid3 {
+	width: 700px;
+	display: block;
+	margin-left: 9px;
+	font-size: 11px;
+	margin-bottom: 40px;
+	margin-top: 0px;	
+}
+
+.grid3 table {
+	width: 700px;
+	font-size: 11px;
+}
+.grid3 select{
+	width: auto;
+	height: 16px;
+	padding: 0;
+}
+.grid3 input.input{
+	width: 150px;
+}
+.grid3 textarea.descricao{
+	width: 500px;
+	height: 50px;
+}
+.grid3 textarea{
+	width: 780px;	
+}
+.grid3 table thead tr {
+	background: #c6c6c6;
+}
+
+.grid3 table tbody tr {
+	background: #f5f5f5;
+}
+
+.grid3 table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+.grid3 table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+.grid3 table tbody td.grid-action {
+	padding: 0;
+	width: 50px;
+}
+.grid3 table td.grid-action a {
+	display: block;
+	width: auto;
+	min-width: 14px;
+	height: 12px;
+	text-indent: -999999999px;
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 2px 0;
+}
+
+.grid3 table td.grid-action a.imprimir {
+	background: url(../_images/icons/bt_print_12x12.gif) center center no-repeat;
+}
+
+.grid3 table td.grid-action a.visualizar {
+	background: url(../_images/icons/bt_view_12x12.gif) center center no-repeat;
+}
+
+.grid3 table td.grid-action a.editar {
+	background: url(../_images/icons/bt_edit_12x12.gif) center center no-repeat;
+}
+
+.grid3 table td.grid-action a.excluir {
+	background: url(../_images/icons/bt_delete_12x12.gif) center center no-repeat;
+}
+.grid table td.grid-action a.email {
+	background: url(../_images/icons/bt_email_12x12.gif) center center no-repeat;
+}
+/* fim de GRID
+_________________________________________________________ */
+
+/* inicio de GRID2 - USADO NA LISTAGEM DE SETORES PARA ORÇAMENTOS
+_________________________________________________________ */
+
+.grid4 {
+	width: 970px;
+	display: block;
+	margin-left: 9px;
+	font-size: 11px;
+	margin-bottom: 40px;
+	margin-top: 0px;	
+}
+
+.grid4 table {
+	width: 500px;
+	font-size: 12px;
+}
+.grid4 select{
+	width: auto;
+	height: 16px;
+	padding: 0;
+}
+.grid4 input.input{
+	width: 50px;
+}
+.grid4 table thead tr {
+	background: #c6c6c6;
+}
+
+.grid4 table tbody tr {
+	background: #f5f5f5;
+}
+
+.grid4 table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+.grid4 table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+.grid4 table tbody td.grid-action {
+	padding: 0;
+	width: 50px;
+}
+
+.grid4 table td.grid-action a {
+	display: block;
+	width: auto;
+	min-width: 14px;
+	height: 12px;
+	text-indent: -999999999px;
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 2px 0;
+}
+
+.grid4 table td.grid-action a.imprimir {
+	background: url(../_images/icons/bt_print_12x12.gif) center center no-repeat;
+}
+
+.grid4 table td.grid-action a.visualizar {
+	background: url(../_images/icons/bt_view_12x12.gif) center center no-repeat;
+}
+
+.grid4 table td.grid-action a.editar {
+	background: url(../_images/icons/bt_edit_12x12.gif) center center no-repeat;
+}
+
+.grid4 table td.grid-action a.excluir {
+	background: url(../_images/icons/bt_delete_12x12.gif) center center no-repeat;
+}
+.grid table td.grid-action a.email {
+	background: url(../_images/icons/bt_email_12x12.gif) center center no-repeat;
+}
+
+/* fim de GRID
+_________________________________________________________ */
+
+
+/* fim de LISTAGEM
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+/* inicio de HOMEPAGE
+_____________________________________________________________________________________________ */
+
+#homepage #menu-principal {
+	display: block;
+}
+
+/* fim de HOMEPAGE
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+/* inicio de CLIENTES
+_____________________________________________________________________________________________ */
+
+#clientes-cadastro form fieldset.endereco-padrao-aba,
+#clientes-cadastro form fieldset.endereco-cobranca-aba {
+	border: 1px solid #e6e6e6;
+	padding-bottom: 4px;
+	margin-top: 40px;
+}
+
+/* fim de CLIENTES
+_____________________________________________________________________________________________ */
+
+/* inicio de FORNECEDORES
+_____________________________________________________________________________________________ */
+
+#fornecedores-cadastro form fieldset.endereco-padrao-aba,
+#fornecedores-cadastro form fieldset.endereco-cobranca-aba {
+	border: 1px solid #e6e6e6;
+	padding-bottom: 4px;
+	margin-top: 40px;
+}
+
+/* fim de FORNECEDORES
+_____________________________________________________________________________________________ */
+
+
+/* inicio de PAUTA
+_____________________________________________________________________________________________ */
+
+#pauta-listagem .filtro {
+	width: 911px;
+	height: 40px;
+	background:#f2f2f2;
+}
+
+#pauta-listagem .filtro fieldset {
+	margin-left:105px;
+}
+
+#pauta-listagem .filtro fieldset.situacoes {
+	border-right:0;
+}
+
+#pauta-listagem .filtro fieldset.linha-dois {
+	position: absolute;
+	margin:24px 0 0 155px;
+}
+
+#pauta-listagem .filtro fieldset.tipos-de-ordenacao {
+	position: absolute;
+	margin:24px 0 0 670px;
+	background:#f2f2f2;
+}
+
+#pauta-listagem .filtro fieldset.tipos-de-ordenacao fieldset {
+	border:0;
+	margin:0;
+	padding-right:0px;
+}
+
+#pauta-listagem .filtro #link-situacoes {
+	font-size:11px;
+	text-decoration:underline;
+	color:#000;
+	cursor:pointer;
+}
+
+div .filtro #situacoes-box {
+	background: #f2f2f2;
+	position: absolute;
+	visibility: hidden;
+	margin-left: 610px;
+	margin-top: -5px;
+	width: 220px !important;
+	padding-bottom:5px;
+	border: 1px solid #ccc;
+}
+
+div .filtro #situacoes-box #ok-situacoes-box {
+	display: block;
+	background: url(../_images/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	width: 50px;
+	text-align:center;
+	font-size:11px;
+	cursor:pointer;
+	margin:0 auto;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+}
+
+div .filtro #situacoes-box #ok-situacoes-box:hover {
+	background: #939393;
+}
+
+div .filtro #situacoes-box ul {
+	list-style:none;
+	margin:0;
+	padding:5px;
+}
+
+#pauta-listagem .filtro fieldset {
+	padding: 0;
+}
+
+#pauta-listagem .filtro fieldset fieldset {
+	margin: 0;
+}
+
+#pauta-listagem .filtro fieldset fieldset fieldset {
+	border-right: 1px solid #7d7d7d;
+	padding-right: 8px;
+	margin-right: 6px;
+}
+
+#pauta-listagem .filtro #cliente,
+#pauta-listagem .filtro #especie,
+#pauta-listagem .filtro #responsavel,
+#pauta-listagem .filtro #situacao {
+	width: 120px;
+}
+
+#pauta-listagem .filtro #inicio,
+#pauta-listagem .filtro #fim {
+	width: 56px;
+}
+
+#pauta-listagem table .col-2 {
+	width: 200px;
+}
+#pauta-listagem table .col-6 {
+	width: 120px;
+}
+
+#pauta-cadastro form #setores-dinamicos h4,
+#pauta-edicao form #setores-dinamicos h4 {
+	margin: 4px 0;
+}
+
+#pauta-cadastro form textarea,
+#pauta-edicao form textarea,
+#pauta-edicao form textarea.caixa-pergunta {
+	height: 150px;
+}
+
+#pauta-cadastro form #setores-dinamicos .bt {
+	margin: 3px 0 0;
+	background: url(../_images/estrutura/fundo5.gif) repeat-x /*#e0cac8*/;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset,
+#pauta-edicao form #setores-dinamicos fieldset {
+	border: 1px solid #e6e6e6;
+	background: #f8f8f8;
+	padding-bottom: 4px;
+	margin-top: 10px;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset fieldset,
+#pauta-edicao form #setores-dinamicos fieldset fieldset {
+	border: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset fieldset textarea,
+#pauta-edicao form #setores-dinamicos fieldset fieldset textarea {
+	height: 200px;
+	margin-bottom: 4px;
+}
+
+#pauta-cadastro form fieldset fieldset fieldset.pitTitulo input,
+#pauta-edicao form fieldset fieldset fieldset.pitTitulo input,
+#pauta-visualizacao form fieldset fieldset fieldset.pitTitulo input {
+	width: 711px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa {
+	margin-bottom: 3px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset {
+	float: none;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset {
+	float: left;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset.tipoDeDesenvolvimentoTarefa\[\] {
+	margin-left: 242px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset.observacoesTarefa\[\] {
+	float: none;
+	display: block;
+}
+
+#pauta-edicao form fieldset #bt-alteracao-briefing {
+	display: block;
+}
+
+#pauta-edicao form fieldset #perguntas-dinamico {
+	clear: both;
+}
+
+#pauta-edicao form fieldset #perguntas-dinamico fieldset {
+	float: none;
+}
+
+#pauta-edicao form fieldset #perguntas-dinamico fieldset label {
+	margin-top: 1px;
+}
+
+#pauta-edicao #historico-de-briefings,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing,
+#pauta-visualizacao #historico-de-briefings #historico-bri {
+	display: block;
+	width: 962px;
+	height: 300px;
+	overflow: auto;
+	border: 1px solid #e6e6e6;
+	background: #f8f8f8;
+	padding: 6px;
+}
+
+#pauta-edicao #historico-de-briefings {
+	margin-bottom: 10px;
+}
+
+#pauta-visualizacao #historico-de-briefings #historico-bri {
+	margin-top: 10px;
+}
+
+#pauta-edicao #historico-de-briefings h4,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h4,
+#pauta-visualizacao #historico-de-briefings #historico-bri h4 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#pauta-edicao #historico-de-briefings h5,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h5,
+#pauta-visualizacao #historico-de-briefings #historico-bri h5 {
+	font-size: 10px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#pauta-edicao #historico-de-briefings h5,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h6,
+#pauta-visualizacao #historico-de-briefings #historico-bri h6 {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 8px 0 0 0;
+}
+
+#pauta-edicao #historico-de-briefings p,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing p,
+#pauta-visualizacao #historico-de-briefings #historico-bri p {
+	font-size: 10px;
+}
+
+#pauta-edicao .adicionar-briefing label {
+	margin-right: 5px;
+}
+
+#pauta-edicao .adicionar-briefing label,
+#pauta-edicao .adicionar-briefing input {
+	float: left;
+}
+
+#pauta-visualizacao #historico-alteracoes h3 {
+	margin-left: 9px;
+}
+
+#pauta-visualizacao #historico-alteracoes .grid .col-1 {
+	width: 57px;
+}
+
+#pauta-visualizacao #historico-alteracoes .grid .col-2 {
+	width: 41px;
+}
+
+#pauta-visualizacao #historico-alteracoes .grid .col-3 {
+	width: 250px;
+}
+
+#pauta-visualizacao #historico-alteracoes .grid .col-5 {
+	width: 120px;
+}
+#pauta-justificativa h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 3px 12px;
+}
+
+#pauta-justificativa {
+	width: 970px;
+	display: block;
+	margin: 0 0 0 9px;
+	font-size: 11px;
+}
+
+#pauta-justificativa table {
+	width: 970px;
+	font-size: 10px;
+}
+
+#pauta-justificativa table thead tr {
+	background: #c6c6c6;
+}
+
+#pauta-justificativa table tbody tr {
+	background: #f5f5f5;
+}
+
+#pauta-justificativa table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+#pauta-justificativa table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+#pauta-justificativa table td.col-1 {
+	width: 310px;
+}
+
+#pauta-justificativa table td input {
+	width: 98%;
+}
+
+#pauta-impressao h3 {
+	margin: 0 0 0 9px;
+}
+
+#pauta-impressao form {
+	padding: 0;
+}
+
+#pauta-impressao fieldset.buttons {
+	margin-left: 15px;
+}
+
+/* fim de PAUTA
+_____________________________________________________________________________________________ */
+
+
+/* início de FINANCEIRO
+_____________________________________________________________________________________________ */
+
+#financeiro-listagem .filtro {
+	width: 911px;
+	height: 20px;
+	background:#f2f2f2;
+}
+
+#financeiro-listagem .filtro fieldset {
+	margin-left:20px;
+}
+
+#financeiro-listagem .filtro fieldset.situacoes {
+	border-right:0;
+}
+
+#financeiro-listagem .filtro fieldset.linha-dois {
+	position: absolute;
+	margin:24px 0 0 155px;
+}
+
+#financeiro-listagem .filtro fieldset.tipos-de-ordenacao {
+	position: absolute;
+	margin:3px 0 0 750px;
+	background:#f2f2f2;
+}
+
+#financeiro-listagem .filtro fieldset.tipos-de-ordenacao fieldset {
+	border:0;
+	margin:0;
+	padding-right:0px;
+}
+
+#financeiro-listagem .filtro #link-situacoes {
+	font-size:11px;
+	text-decoration:underline;
+	color:#000;
+	cursor:pointer;
+}
+
+div .filtro #situacoes-box {
+	background: #f2f2f2;
+	position: absolute;
+	visibility: hidden;
+	margin-left: 610px;
+	margin-top: -5px;
+	width: 220px !important;
+	padding-bottom:5px;
+	border: 1px solid #ccc;
+}
+
+div .filtro #situacoes-box #ok-situacoes-box {
+	display: block;
+	background: url(../_images/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	width: 50px;
+	text-align:center;
+	font-size:11px;
+	cursor:pointer;
+	margin:0 auto;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+}
+
+div .filtro #situacoes-box #ok-situacoes-box:hover {
+	background: #939393;
+}
+
+div .filtro #situacoes-box ul {
+	list-style:none;
+	margin:0;
+	padding:5px;
+}
+
+#financeiro-listagem .filtro fieldset {
+	padding: 0;
+}
+
+#financeiro-listagem .filtro fieldset fieldset {
+	margin: 0;
+}
+
+#financeiro-listagem .filtro fieldset fieldset fieldset {
+	border-right: 1px solid #7d7d7d;
+	padding-right: 8px;
+	margin-right: 6px;
+}
+
+#financeiro-listagem .filtro #cliente,
+#financeiro-listagem .filtro #especie,
+#financeiro-listagem .filtro #responsavel,
+#financeiro-listagem .filtro #situacao {
+	width: 120px;
+}
+
+#financeiro-listagem .filtro #inicio,
+#financeiro-listagem .filtro #fim {
+	width: 56px;
+}
+#financeiro-listagem .filtro #produto {
+	width: 110px;
+}
+
+#financeiro-listagem table .col-2 {
+	width: 200px;
+}
+#financeiro-listagem table .col-6 {
+	width: 120px;
+}
+
+/* fim de FINANCEIRO
+_______________________________________________________________________________________ */
+
+
+.form input[hidden],
+input[hidden],
+.hidden {
+	display: none;
+}

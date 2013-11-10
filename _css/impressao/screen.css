@@ -1,0 +1,982 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+a {
+	outline: none;
+}
+
+.warning {
+	display: block;
+	width: auto;
+	height: auto;
+	background: #fdf7a6 url(../img/icons/action_alert_16x16.gif) 12px center no-repeat;
+	border: 1px solid #aba000;
+	font-size: 10px;
+	color: #827b00;
+	padding: 3px 3px 3px 44px;
+}
+
+.error {
+	display: block;
+	width: auto;
+	height: auto;
+	background: #f69679 url(../img/icons/action_error_16x16.gif) 12px center no-repeat;
+	border: 1px solid #9e0b0f;
+	font-size: 10px;
+	color: #790000;
+	padding: 3px 3px 3px 44px;
+}
+
+
+
+/* inicio de CABECALHO
+_____________________________________________________________________________________________ */
+
+#cabecalho {
+	position: relative;
+	display: block;
+	width: auto;
+	height: 16px;
+	padding: 2px 5px;
+	background: url(../img/estrutura/fundo1.gif) repeat-x /*#7fc2e7/*#c3c3c3*/;
+}
+
+#cabecalho h1 {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+#cabecalho a {
+	position: absolute;
+	top: 1px;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px;
+	background: url(../img/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #fff;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#cabecalho a:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+#cabecalho a.sistema {
+	background: none;
+	border: 0;
+	top: 2px;
+	left: 6px;
+	padding: 0;
+	font-size: 14px;
+	color: #006399;/*#000*/;
+	font-weight: bold;
+}
+
+#cabecalho a.sistema:hover {
+	background: #adadad;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+#cabecalho h2 {
+	position: absolute;
+	background: none;
+	border: 0;
+	top: -5px;
+	left: 120px;
+	padding: 0;
+	color: #000;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#cabecalho a.configuracoes {
+	right: 50px;
+}
+
+#cabecalho a.sair {
+	right: 10px;
+}
+
+/* fim de CABECALHO
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+/* inicio de MENU PRINCIPAL
+_____________________________________________________________________________________________ */
+
+#menu-principal {
+	display: none;
+	padding: 0;
+	margin: 2px 0 0 0;
+	list-style-type: none;
+}
+
+#menu-principal li {
+	display: inline;
+}
+
+#menu-principal li a {
+	background: url(../img/icons/menu/menu-default.gif) center 0px no-repeat;
+	float: left;
+	display: block;
+	width: 69px;
+	height: 15px;
+	padding-top: 43px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+}
+
+#menu-principal li a.funcionarios,
+.funcionarios #menu-secao li a {
+	background: url(../img/icons/menu/funcionarios.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.clientes,
+.clientes #menu-secao li a {
+	background: url(../img/icons/menu/clientes.jpg) center 0px no-repeat;
+}
+
+#menu-principal li a.pauta,
+.pauta #menu-secao li a {
+	background: url(../img/icons/menu/pauta.jpg) center 0px no-repeat;
+}
+
+/* fim de MENU PRINCIPAL
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de MENU SE플O
+_____________________________________________________________________________________________ */
+
+#menu-secao {
+	padding: 0;
+	margin: 2px 0 40px 0;
+	list-style-type: none;
+}
+
+#menu-secao li {
+	display: inline;
+	font-size: 22px;
+	color: #006399;
+}
+
+#menu-secao li a {
+	background: url(../img/icons/menu-default.gif) center 0px no-repeat;
+	float: left;
+	display: block;
+	width: 69px;
+	height: 15px;
+	padding-top: 43px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+}
+
+/* fim de MENU SE플O
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de SUB MENU
+_____________________________________________________________________________________________ */
+
+#sub-menu {
+	position: absolute;
+	left: 89px;
+	top: 54px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#sub-menu li {
+	display: inline;
+}
+
+#sub-menu li a {
+	float: left;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 1px 8px;
+	background: #fff url(../img/estrutura/fundo1.gif) center repeat-x !important /*#d4d4d4*/;
+	border-left: 1px solid #d2d2d2;
+	border-top: 1px solid #d2d2d2;
+	border-right: 1px solid #979797/*#bababa*/;
+	border-bottom: 1px solid #979797/*#bababa*/;
+	color: #000;
+	font-size: 11px;
+	text-decoration: none;
+	margin-right: 4px;
+}
+
+#sub-menu li a:hover {
+	background: #d3d3d3/*#939393*/;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+/* fim de SUB PRINCIPAL
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de EXPANDIR
+_____________________________________________________________________________________________ */
+
+#expandir {
+	position: absolute;
+	right: 26px;
+	top: 20px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#expandir li {
+	display: inline;
+}
+
+#expandir li a {
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px 0 26px;
+	background: url(../img/icons/flecha-down.gif) no-repeat 6px 5px /*#e6e6e6*/;
+	/*border-right: 1px solid #7a7a7a;
+	border-bottom: 1px solid #7a7a7a;
+	border-left: 1px solid #bbb;*/
+	color: #000;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+#expandir li a:hover {
+	/*background: #c3c3c3;
+	border-right: 1px solid #bebdbd;
+	border-bottom: 1px solid #bebdbd;
+	border-left: 1px solid #aeaeae;*/
+}
+
+
+/* fim de EXPANDIR
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+
+/* inicio de FORM
+_____________________________________________________________________________________________ */
+
+form {
+	clear: both;
+	margin: 0 10px;
+}
+
+form h3 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 3px;
+}
+
+form .abas {
+	position: absolute;
+	list-style-type: none;
+	font-size: 11px;
+	margin-bottom: -2px;
+	z-index: 10;
+	height: 20px;
+}
+
+form .abas li {
+	display: inline;
+}
+
+form .abas li a {
+	float: left;
+	display: block;
+	/*border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	padding: 2px 18px;*/
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-top: 3px solid #fff;
+	padding: 1px 18px 0;
+	background: #e6e6e6;
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+form .abas li a:hover {
+	border-left: 1px solid #dcd680;
+	border-right: 1px solid #dcd680;
+	border-top: 1px solid #dcd680;
+	background: #c7c7c7;
+	padding: 2px 18px;
+}
+
+form .abas li a.selecionada {
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	background: #fff;
+	padding: 2px 18px;
+}
+
+form fieldset {
+	padding: 0 0 0 4px;
+	margin: 0 0 12px 0;
+	border: 0;
+	clear: both;
+	width: 970px;
+}
+
+form fieldset legend {
+	font-size: 11px;
+}
+
+form fieldset fieldset {
+	padding: 0;
+	margin: 4px 0 0 0;
+	clear: none;
+}
+
+form fieldset fieldset fieldset {
+	float: left;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+form fieldset fieldset label {
+	display: block;
+	font-size: 11px;
+}
+
+form input,
+form select,
+form textarea {
+	border: 1px solid #a7a7a7/*#737373*/;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding: 2px;
+	background: #fff;
+	color: #000;
+}
+
+form input {
+	width: 226px;
+}
+
+form select {
+	width: 232px;
+}
+
+form textarea {
+	width: 952px;
+}
+
+form .radio {
+	border: 0;
+}
+
+form .radio,
+form .checkbox {
+	width: auto;
+	border: 0;
+	background: none;
+}
+
+form fieldset.checkbox {
+	padding-top: 11px;
+}
+
+form fieldset.checkbox .checkbox {
+	float: left;
+}
+
+form fieldset.checkbox label {
+	float: left;
+	padding-top: 4px;
+}
+
+form fieldset.buttons {
+	margin: 15px 0;
+}
+
+form fieldset.buttons input,
+form .bt {
+	width: auto;
+	height: auto;
+	padding: 0 8px;
+	background: url(../img/estrutura/fundo2.gif) repeat-x /*#737373*/;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #000/*#fff*/;
+	font-size: 11px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+form fieldset.buttons .reset,
+form .reset {
+	background: url(../img/estrutura/fundo5.gif) repeat-x /*#e0cac8*/;
+}
+
+form fieldset.buttons input:hover,
+form .bt:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+/* fim de FORM
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+/* inicio de LISTAGEM
+_____________________________________________________________________________________________ */
+
+/* inicio de FILTRO
+_________________________________________________________ */
+
+div .filtro {
+	position: relative;
+	width: 911px;
+	height: 16px;
+	background: url(../img/estrutura/fundo4.gif) top repeat-x /*#e6e6e6*/;
+	padding: 2px 1px 2px 56px;
+}
+
+div .filtro h3 {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+}
+
+div .filtro fieldset {
+	display: inline;
+}
+
+div .filtro fieldset fieldset {
+	position: absolute;
+	left: 50px;
+	top: -2px;
+}
+
+div .filtro fieldset fieldset {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+div .filtro fieldset fieldset label {
+	display: inline;
+}
+
+div .filtro fieldset fieldset input,
+div .filtro fieldset fieldset select {
+	padding: 0 4px;
+	height: 14px;
+	font-size: 10px;
+}
+
+div .filtro fieldset fieldset select {
+	padding: 0;
+	width: auto;
+}
+
+div .filtro fieldset fieldset .radio {
+	margin-top: 1px;
+	height: 12px;
+}
+
+div .filtro .buttons {
+	width: auto;
+}
+
+div .filtro .buttons input {
+	position: absolute;
+	right: 4px;
+	top: 3px;
+	display: block;
+	width: auto;
+	height: 14px;
+	padding: 0 8px;
+	/*background: #d4d4d4;
+	border-left: 1px solid #d2d2d2;
+	border-top: 1px solid #d2d2d2;
+	border-right: 1px solid #bababa;
+	border-bottom: 1px solid #bababa;*/
+	background: url(../img/estrutura/fundo2.gif) repeat-x;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #646464;
+	border-bottom: 1px solid #646464;
+	color: #000;
+	font-size: 8px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div .filtro .buttons input:hover {
+	background: #939393;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	border-left: 1px solid #7a7a7a;
+	border-top: 1px solid #7a7a7a;
+}
+
+/* fim de FILTRO
+_________________________________________________________ */
+
+/* inicio de PAGINA플O
+_________________________________________________________ */
+
+#form-paginacao {
+	position: relative;
+	width: 893px;
+	height: 16px;
+	background: url(../img/estrutura/fundo6.gif) top repeat-x /*#e6e6e6*/;
+	padding: 2px 1px 2px 74px;
+}
+
+#form-paginacao h3 {
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#form-paginacao fieldset {
+	display: inline;
+}
+
+#form-paginacao fieldset fieldset {
+	position: absolute;
+	left: 50px;
+	top: -2px;
+}
+
+#form-paginacao fieldset fieldset {
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+#form-paginacao fieldset fieldset label {
+	display: inline;
+}
+
+#form-paginacao fieldset fieldset input,
+#form-paginacao fieldset fieldset select {
+	padding: 0 4px;
+	height: 14px;
+	font-size: 10px;
+}
+
+#form-paginacao fieldset fieldset select {
+	padding: 0;
+	width: auto;
+}
+
+/* fim de PAGINA플O
+_________________________________________________________ */
+
+/* inicio de GRID
+_________________________________________________________ */
+
+.grid {
+	width: 970px;
+	display: block;
+	margin: 0 0 0 9px;
+	font-size: 11px;
+}
+
+.grid table {
+	width: 970px;
+}
+
+.grid table thead tr {
+	background: #c6c6c6;
+}
+
+.grid table tbody tr {
+	background: #f5f5f5;
+}
+
+.grid table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+.grid table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+.grid table tbody td.grid-action {
+	padding: 0;
+}
+
+.grid table td.grid-action a {
+	display: block;
+	width: auto;
+	min-width: 14px;
+	height: 12px;
+	text-indent: -999999999px;
+	font-size: 0;
+	letter-spacing: 0;
+	margin: 2px 0;
+}
+
+.grid table td.grid-action a.imprimir {
+	background: url(../img/icons/bt_print_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.visualizar {
+	background: url(../img/icons/bt_view_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.editar {
+	background: url(../img/icons/bt_edit_12x12.gif) center center no-repeat;
+}
+
+.grid table td.grid-action a.excluir {
+	background: url(../img/icons/bt_delete_12x12.gif) center center no-repeat;
+}
+
+/* fim de GRID
+_________________________________________________________ */
+
+/* fim de LISTAGEM
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+
+/* inicio de HOMEPAGE
+_____________________________________________________________________________________________ */
+
+#homepage #menu-principal {
+	display: block;
+}
+
+/* fim de HOMEPAGE
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+/* inicio de CLIENTES
+_____________________________________________________________________________________________ */
+
+#clientes-cadastro form fieldset.endereco-padrao-aba,
+#clientes-cadastro form fieldset.endereco-cobranca-aba {
+	border: 1px solid #e6e6e6;
+	padding-bottom: 4px;
+	margin-top: 29px;
+}
+
+/* fim de CLIENTES
+_____________________________________________________________________________________________ */
+
+
+
+
+
+
+/* inicio de PAUTA
+_____________________________________________________________________________________________ */
+
+#pauta-listagem .filtro {
+	width: 911px;
+	height: 16px;
+}
+
+#pauta-listagem .filtro fieldset {
+	padding: 0;
+}
+
+#pauta-listagem .filtro fieldset fieldset {
+	margin: 0;
+}
+
+#pauta-listagem .filtro fieldset fieldset fieldset {
+	border-right: 1px solid #7d7d7d;
+	padding-right: 8px;
+	margin-right: 6px;
+}
+
+#pauta-listagem .filtro #cliente,
+#pauta-listagem .filtro #especie,
+#pauta-listagem .filtro #responsavel,
+#pauta-listagem .filtro #situacao {
+	width: 53px;
+}
+
+#pauta-listagem .filtro #inicio,
+#pauta-listagem .filtro #fim {
+	width: 53px;
+}
+
+#pauta-listagem table .col-2 {
+	width: 200px;
+}
+
+#pauta-listagem table .col-6 {
+	width: 58px;
+}
+
+#pauta-cadastro form #setores-dinamicos h4,
+#pauta-edicao form #setores-dinamicos h4 {
+	margin: 4px 0;
+}
+
+#pauta-cadastro form textarea,
+#pauta-edicao form textarea,
+#pauta-edicao form textarea.caixa-pergunta {
+	height: 150px;
+}
+
+#pauta-cadastro form #setores-dinamicos .bt {
+	margin: 3px 0 0;
+	background: url(../img/estrutura/fundo5.gif) repeat-x /*#e0cac8*/;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset,
+#pauta-edicao form #setores-dinamicos fieldset {
+	border: 1px solid #e6e6e6;
+	background: #f8f8f8;
+	padding-bottom: 4px;
+	margin-top: 10px;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset fieldset,
+#pauta-edicao form #setores-dinamicos fieldset fieldset {
+	border: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+}
+
+#pauta-cadastro form #setores-dinamicos fieldset fieldset textarea,
+#pauta-edicao form #setores-dinamicos fieldset fieldset textarea {
+	height: 200px;
+	margin-bottom: 4px;
+}
+
+#pauta-cadastro form fieldset fieldset fieldset.pitTitulo input,
+#pauta-edicao form fieldset fieldset fieldset.pitTitulo input,
+#pauta-visualizacao form fieldset fieldset fieldset.pitTitulo input {
+	width: 711px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa {
+	margin-bottom: 3px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset {
+	float: none;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset {
+	float: left;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset.tipoDeDesenvolvimentoTarefa\[\] {
+	margin-left: 242px;
+}
+
+#pauta-edicao form #setores-dinamicos fieldset fieldset.caixa-tarefa fieldset fieldset fieldset.observacoesTarefa\[\] {
+	float: none;
+	display: block;
+}
+
+#pauta-edicao form fieldset #bt-alteracao-briefing {
+	display: block;
+}
+
+#pauta-edicao form fieldset #perguntas-dinamico fieldset {
+	float: none;
+}
+
+#pauta-edicao form fieldset #perguntas-dinamico fieldset label {
+	margin-top: 1px;
+}
+
+#pauta-edicao #historico-de-briefings,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing,
+#pauta-visualizacao #historico-de-briefings #historico-bri {
+	display: block;
+	width: 970px;
+	height: 300px;
+	overflow: auto;
+	border: 1px solid #e6e6e6;
+	background: #f8f8f8;
+	padding: 6px;
+}
+
+#pauta-edicao #historico-de-briefings {
+	margin-bottom: 10px;
+}
+
+#pauta-visualizacao #historico-de-briefings #historico-bri {
+	margin-top: 10px;
+}
+
+#pauta-edicao #historico-de-briefings h4,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h4,
+#pauta-visualizacao #historico-de-briefings #historico-bri h4,
+#pauta-visualizacao #historico-de-briefings #historico-bri h5 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+#pauta-visualizacao #historico-de-briefings #historico-bri h5 {
+	margin-top: 3px;
+}
+
+#pauta-edicao #historico-de-briefings h4,
+#pauta-visualizacao #historico-de-briefings #historico-bri h5 {
+	padding-top: 5px;
+	border-top: 1px solid #e9e9e9;
+}
+
+#pauta-edicao #historico-de-briefings h5,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h5 {
+	font-size: 10px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#pauta-edicao #historico-de-briefings h5,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing h6,
+#pauta-visualizacao #historico-de-briefings #historico-bri h6 {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 8px 0 0 0;
+}
+
+#pauta-edicao #historico-de-briefings p,
+#pauta-visualizacao #historico-de-briefings #ultimo-briefing p,
+#pauta-visualizacao #historico-de-briefings #historico-bri p {
+	font-size: 10px;
+}
+
+#pauta-justificativa h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 3px 12px;
+}
+
+#pauta-justificativa {
+	width: 970px;
+	display: block;
+	margin: 0 0 0 9px;
+	font-size: 11px;
+}
+
+#pauta-justificativa table {
+	width: 970px;
+}
+
+#pauta-justificativa table thead tr {
+	background: #c6c6c6;
+}
+
+#pauta-justificativa table tbody tr {
+	background: #f5f5f5;
+}
+
+#pauta-justificativa table tbody tr.par {
+	background: #e6e6e6;
+} 
+
+#pauta-justificativa table td {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+#pauta-justificativa table td.col-1 {
+	width: 310px;
+}
+
+#pauta-justificativa table td input {
+	width: 98%;
+}
+
+/* fim de PAUTA
+_____________________________________________________________________________________________ */
