@@ -12,6 +12,7 @@ require_once $dirRoot.'model/horarios.class.php';
 require_once $dirRoot.'model/convenios.class.php';
 require_once $dirRoot.'model/clientes.class.php';
 require_once $dirRoot.'model/medicos.class.php';
+require_once $dirRoot.'model/procedimentos.class.php';
 
 $ModelClientes = new ModelClientes();
 $ModelMedicos = new ModelMedicos();
@@ -59,7 +60,9 @@ $id_usuario = $_SESSION['id'];
 <div id="dialog-modal" title="Agendar Hor&aacute;rio">
 
 <form class="form-auto-validated" id="agendar-horario">
+	<input type="hidden" name="action" id="action" >
 	<input type="hidden" name="medico-modal" id="medico-modal">
+	<input type="hidden" name="cod-agenda" id="cod-agenda">
 	<fieldset>
 		<fieldset>
 			<fieldset>
@@ -111,7 +114,7 @@ $id_usuario = $_SESSION['id'];
 				<label>
 					Tipo 
 				</label>
-				<select name="tipo">
+				<select name="tipo" id="tipo">
 					<option value="C">Consulta</option>
 					<option value="R">Reconsulta</option>					
 				</select>
@@ -126,6 +129,24 @@ $id_usuario = $_SESSION['id'];
 			</fieldset>
 		</fieldset>
 		<fieldset>
+			<fieldset>
+				<label>
+					Procedimento
+				</label>
+				<select name="procedimento" id="procedimento">
+					<option value="null">Nenhum</option>
+					<? 
+					$ModelProcedimentos = new ModelProcedimentos();
+					$arrayProcedimentos = $ModelProcedimentos->loadProcedimentos();
+					for($i=0; $i<sizeof($arrayProcedimentos); $i++)
+					{
+						?>
+						<option value="<?=$arrayProcedimentos[$i]->get("codprocedimento")?>"><?=$arrayProcedimentos[$i]->get("nome")?></option>
+						<? 
+					}				
+					?>
+				</select>
+			</fieldset>
 			<fieldset>
 				<label>
 					Valor 

@@ -12,6 +12,8 @@ class Agenda{
 	private $convenio;
 	private $valorconsulta;
 	private $observacoes;
+	private $cod_procedimento;
+	
 	
 	function __construct()
 	{
@@ -49,7 +51,8 @@ class ModelAgenda
 					ag_convenio,
 					ag_valorconsulta,
 					ag_observacoes,
-					ag_medico 				
+					ag_medico,
+					ag_procedimento				
 					) VALUES (
 				'".$Agenda->get('dataconsulta')."',
 				'".$Agenda->get('horainicio')."',
@@ -60,7 +63,8 @@ class ModelAgenda
 				'".$Agenda->get('convenio')."',
 				'".$Agenda->get('valorconsulta')."',
 				'".$Agenda->get('observacoes')."',
-				'".$Agenda->get('cod_medico')."')";
+				'".$Agenda->get('cod_medico')."',
+				".campotextoparaobanco($Agenda->get('cod_procedimento')).")";
 		//echo $sql;
 		executeOpened($conn, $sql, $cod);
 			
@@ -114,7 +118,9 @@ class ModelAgenda
 						ag_atendido = '".$Agenda->get('atendido')."',
 						ag_paciente = '".$Agenda->get('cod_paciente')."',
 						ag_convenio = '".$Agenda->get('convenio')."',
-						ag_valorconsulta = '".$Agenda->get('valorconsulta')."'				
+						ag_procedimento = ".$Agenda->get('cod_procedimento').",
+						ag_valorconsulta = '".$Agenda->get('valorconsulta')."',				
+						ag_observacoes = '".$Agenda->get('observacoes')."'
 						WHERE ag_agenda = ".$Agenda->get('cod_agenda');
 		//echo $sql;
 		Execute($conn, $sql);
@@ -172,7 +178,8 @@ class ModelAgenda
 						ag_convenio,
 						ag_valorconsulta,
 						ag_observacoes,
-						ag_medico  							
+						ag_medico,
+						ag_procedimento    							
 						FROM agenda 
 						WHERE ag_agenda = '".$codagenda."'";
 			$i=0;
@@ -193,12 +200,15 @@ class ModelAgenda
 					$Agenda->set('valorconsulta', valorparaousuario_new($linha[8]));
 					$Agenda->set('observacoes', $linha[9]);
 					$Agenda->set('cod_medico', $linha[10]);
+					$Agenda->set('cod_procedimento', $linha[11]);
 					if($Agenda->get('tipoconsulta') == 'C')
 					{
 						$Agenda->set('tipoconsultadescricao', "Consulta");
 					}else{
 						$Agenda->set('tipoconsultadescricao', "Reconsulta");
 					}
+					
+					
 					
 				}
 	
@@ -303,6 +313,54 @@ class ModelAgenda
 		}
 	}
 	
+	/**
+	 * Verifica se a data da reconsulta está dentro do prazo estipulado. 
+	 * @param unknown_type $data
+	 * @param unknown_type $paciente
+	 * @param unknown_type $medico
+	 * @param unknown_type $prazo
+	 * @return boolean
+	 */
+	public function verificaPrazoReconsulta($data, $paciente, $medico, $prazo)
+	{
+		try{
+			////CONECTA O BANCO E INICIA A TRANSAÇÃO///
+			$conn = conecta_banco();
+			$sql = "SELECT
+					MAX(ag_dataconsulta) 					
+					FROM agenda 
+					WHERE ag_medico = '".$medico."' AND ag_paciente = '".$paciente."' LIMIT 1";
+			$i=0;
+			//cho $sql;
+			$resultado = Execute($conn, $sql);
+			if($resultado -> numRows() > 0)
+			{
+				$linha = $resultado->fetchRow();
+				$dataultimaconsulta = $linha[0];
+				
+				$dataultimaconsulta = strtotime($dataultimaconsulta);
+				$dataagendamento = strtotime($data);
+				
+				// Calcula a diferença de segundos entre as duas datas:
+				$diferenca = $dataagendamento - $dataultimaconsulta; // x segundos
+				// Calcula a diferença de dias
+				$dias = (int)floor( $diferenca / (60 * 60 * 24)); // x dias
+				
+				if($dias > $prazo)
+				{
+					return false;
+				}else{
+					return true;
+				}				
+				
+			}else{
+				return true;
+			}
+		}catch(Exception $e)
+		{
+			echo $e->getMessage();
+		}
+	}
 	public function loadByPaciente($codpaciente)
 	{
 		try{

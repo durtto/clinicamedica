@@ -8,10 +8,11 @@ require_once $dirRoot.'model/horarios.class.php';
 require_once $dirRoot.'model/convenios.class.php';
 require_once $dirRoot.'model/clientes.class.php';
 include_once $dirRoot.'model/fluxodecaixa.class.php';
+include_once $dirRoot.'model/medicos.class.php';
 
 $ModelClientes = new ModelClientes();
 $ModelAgenda = new ModelAgenda();
-
+$ModelMedicos = new ModelMedicos();
 if($_GET['atualizar'] == '1')
 {
 	$Agenda = new Agenda();
@@ -27,13 +28,16 @@ if($_GET['atualizar'] == '1')
 			$Cliente = new Cliente();
 			$Cliente = $ModelClientes->loadById($Agenda->get('cod_paciente'));
 			
+			$Medico = new Medico();
+			$Medico = $ModelMedicos->loadById($Agenda->get('cod_medico'));
+			
 			$FluxoDeCaixa = new FluxoDeCaixa();
 			$FluxoDeCaixa->set('codpessoa', $Agenda->get('cod_paciente'));
 			$FluxoDeCaixa->set('qtdparcelas', '1');
 			$FluxoDeCaixa->set('dataentrada', date('Y-m-d'));
 			$FluxoDeCaixa->set('valortotal', valorparaobanco($Agenda->get('valorconsulta')));
 			$FluxoDeCaixa->set('codagenda', $Agenda->get('cod_agenda'));
-			$FluxoDeCaixa->set('descricao', "Consulta cód.: ".$Agenda->get('cod_agenda')." - ".$Cliente->get('nomecliente'));
+			$FluxoDeCaixa->set('descricao', "Consulta: ".$Agenda->get('cod_agenda')." - Médico(a): ".$Medico->get('nome'));
 			$FluxoDeCaixa->set('formapagamento', 3);
 			$FluxoDeCaixa->set('tipopagamento', 1);
 			$FluxoDeCaixa->set('categoriamovimentacao', 9);

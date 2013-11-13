@@ -41,6 +41,7 @@ $(function() {
 		 $("#valorconsulta").val("");
 		 $("#response").html("");
 		 
+		 
 	}
 	 
 	function exibeAgenda(dataSelecionada, medicoSelecionado)
@@ -62,8 +63,10 @@ $(function() {
 	}
 	
 	$("#submit-button").click(function() {
-
-	    var url = "ajax/insert.php"; // the script where you handle the form input.
+		
+		var action = $("#action").val();
+		
+	    var url = "ajax/"+action+".php"; // the script where you handle the form input.
 		
 	    $.ajax({
 	           type: "POST",

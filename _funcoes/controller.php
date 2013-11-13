@@ -42,6 +42,10 @@ function frontcontroller($resultado,$opcao)
 	{
 		$destino = "basicos/marcas/delete-marcas.php?cod=".$param;
 	}
+	else if($opcao == "home-procedimentos")
+	{
+		$destino = "basicos/procedimentos/home.php";
+	}
 	else if($opcao == "home-setores")
 	{
 		$destino = "basicos/setores/home-setores.php";

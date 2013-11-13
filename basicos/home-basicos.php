@@ -23,6 +23,7 @@ include("../componentes/cabecalho.php");
 	<li>
 		<a href="../_funcoes/controller.php?opcao=home-marcas">Marcas</a>		
 		<a href="../_funcoes/controller.php?opcao=home-setores">Setores</a>		
+		<a href="../_funcoes/controller.php?opcao=home-procedimentos">Procedimentos</a>
 	</li>
 </div>
 

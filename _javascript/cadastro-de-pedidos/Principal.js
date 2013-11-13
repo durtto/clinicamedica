@@ -166,7 +166,7 @@ $().ready(function() {
 				inputs[i].onkeyup = function()
 				{		
 					
-					var qtd = $(this).parent().next('.col-4').children().val();
+					var qtd = $(this).parent().next('.col-3').children().val();
 					var valor = $(this).val();
 					
 					valor = valor.replace(".","");						
@@ -176,15 +176,13 @@ $().ready(function() {
 					{					
 						var valornovo = qtd * valor;						
 						valornovo = valornovo.formatMoney();
-						var subtotal = document.getElementsByName("subtotal[]");
-						for(var x=0;x<subtotal.length;x++)
-						{							
-							if($(this).attr('id') == cod)
-							{								
-								$(this).val() = valornovo;									
-							}
-						}
-						new total();
+											
+						var campos = $(this).parent();
+						var td = campos[0];
+						var tdsubtotal = $(this).parent().next('.col-4');
+						var subtotal = tdsubtotal.children();						
+						subtotal[0].value = valornovo;
+						new total();						
 					}
 				}
 			}
