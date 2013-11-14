@@ -17,6 +17,7 @@ $().ready(function() {
 		rules: {
 			nome: "required",
 			pesNome: "required",
+			pesNomeJ: "required",
 			'nome[]': "required",
 			//'cargo[]': "required",
 			pesjRazaosocial: "required",	

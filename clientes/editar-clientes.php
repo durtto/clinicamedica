@@ -127,7 +127,7 @@ $sql = "SELECT	end_endereco, end_cep, end_logradouro, end_numero, end_complement
             <label for='pesNome'>
               Nome
             </label>
-            <input id='pesNome' maxlength='256' name='pesNome' type='text' value='<? echo $nome_cliente; ?>' />
+            <input id='pesNome'  maxlength='256' name='pesNome' type='text' value='<? echo $nome_cliente; ?>' />
           </fieldset>
           <fieldset class='pesfCpf validate=cpf-null cpf-mask'>
             <label for='pesfCpf'>
@@ -161,7 +161,7 @@ $sql = "SELECT	end_endereco, end_cep, end_logradouro, end_numero, end_complement
             <label for='pesNome'>
               Nome
             </label>
-            <input id='pesNome' maxlength='256' name='pesNome' type='text' value="<?=$nome_cliente?>"/>
+            <input id='pesNome' maxlength='256' name='pesNomeJ' type='text' value="<?=$nome_cliente?>"/>
           </fieldset>
           <fieldset id="cpf" class='pesfCpf validate=cpf-null cpf-mask'>
             <label for='pesfCpf'>

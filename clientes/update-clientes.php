@@ -15,7 +15,7 @@ if($tipodecliente == "fisica")
 	$pesfRg = $_POST['pesfRg'];
 }else{	
 	$tipodecliente = "J";
-	$pesNome = strParaBD($_POST['pesNome']);
+	$pesNome = strParaBD($_POST['pesNomeJ']);
 	$pesjRazaosocial = $_POST['razaosocial'];
 	//$pesjNomepessoacontato	= $_POST['pesjNomepessoacontato'];
 	$pesjCnpj = $_POST['cnpj'];
@@ -42,13 +42,11 @@ if($pesNome == "")
 	$pesNome = $pesNomeFantasia;
 }
 
-
-
-
+$sql1 = "update pessoas set pes_nome = '$pesNome' where pes_pessoa = '$cod'";
+if (!($conn -> Execute($sql1))) {
+	$erro='Erro:'.$conn -> ErrorMsg().'<BR>'.$sql1;
 	
-
-
-
+}
 
 if($cod_endereco != "" && $cod_endereco != "null")
 {
@@ -75,12 +73,6 @@ if($tipodecliente == "F")
 }else{
 	$sql3 = "update clientes set cli_contato = '$pesjNomepessoacontato', cli_endereco = '$cod_endereco', cli_cnpj = '$pesjCnpj', cli_razaosocial = '$pesjRazaosocial', cli_inscricao_rg = '$pesjInscricaoestadual', cli_con_comercial = '$conComercial', cli_con_residencial = '$conResidencial', cli_con_celular = '$conCelular', cli_con_email = '$conEmail', cli_observacoes = '$cliObservacoes', cli_estahativo = '$situacao', cli_tipodepessoa = '$tipodecliente' where cli_cliente = '$cod'";		
 }
-
-$sql1 = "update pessoas set pes_nome = '$pesNome' where pes_pessoa = '$cod'";
-if (!($conn -> Execute($sql1))) {
-    $erro='Erro:'.$conn -> ErrorMsg().'<BR>'.$sql1;
-}
-
 if (!($conn -> Execute($sql3))) {
     $erro.='Erro:'.$conn -> ErrorMsg().'<BR>'.$sql3;
 }
@@ -89,8 +81,6 @@ if($erro != '')	{
 	include('../error/error.php?erro='.$erro);		
 }
 else{	
-	echo "<script>
-		 location.href='../_funcoes/controller.php?opcao=home-clientes';
-	  </script>";	
+	echo "<script>location.href='../_funcoes/controller.php?opcao=home-clientes';</script>";	
 }
 ?>

@@ -96,7 +96,7 @@ $conn = conecta_banco();
             <label for='pesNome'>
               Nome
             </label>
-            <input id='pesNome' maxlength='256' name='pesNome' type='text' />
+            <input id='pesNome' maxlength='256' name='pesNomeJ' type='text' />
           </fieldset>
           <fieldset id="cpf" class='pesfCpf validate=cpf-null cpf-mask'>
             <label for='pesfCpf'>

@@ -29,15 +29,16 @@ $().ready(function() {
 	        });			
 		}		
 	});
-		
+	
+	
 	var tipoCliente = $(".tipoDeCliente:checked").val();
 	if(tipoCliente == "fisica")
 	{
 		$("#campos-fisica").show();
-		$("#campos-juridica").hide();
+		$("#campos-juridica").hide();		
 	}else{
 		$("#campos-fisica").hide();
-		$("#campos-juridica").show();
+		$("#campos-juridica").show();		
 	}
 	
 

@@ -15,7 +15,7 @@ if($tipodecliente == "fisica")
 else
 {	
 	$tipodecliente = "J";
-	$pesNome = strParaBD($_POST['pesNome']);
+	$pesNome = strParaBD($_POST['pesNomeJ']);
 	$pesjRazaosocial = $_POST['razaosocial'];
 	//$pesjNomepessoacontato	= $_POST['pesjNomepessoacontato'];
 	$pesjCnpj = $_POST['cnpj'];
